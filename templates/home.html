@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block container %}
+    <p>Welcome!</p>
+    {% for song in song_list%}
+    <div>
+      <p>Music Name: {{song["song_name"]}}</h1>
+      <p>user: {{song["user_name"]}}</p>
+    </div>
+    <br>
+    {% endfor %}
+    <div>
+      <h1>Add songs</h1>
+    </div>
+    <form method="POST" action="/api/add-songs">
+      user_name
+      <input type="text" name="user_name" />
+      song_name
+      <input type="text" name="song_name" />
+      <input type="submit" value="Save!" />
+    </form>
+
+    <div>
+      <h1>Delete songs</h1>
+    </div>
+    <form method="POST" action="/api/delete-songs">
+      user_name
+      <input type="text" name="user_name" />
+      song_name
+      <input type="text" name="song_name" />
+      <input type="submit" value="Save!" />
+    </form>
+
+    
+{% endblock %}
