@@ -14,11 +14,11 @@ You are good to go!
 
 ## Product vision statement
 
-See instructions. Delete this line and place the Product Vision Statement here.
+We are creating an app that allows users to post what songs they are currently listening to, and also view posts from other users.
 
 ## User stories
 
-See instructions. Delete this line and place a link to the user stories here.
+https://github.com/software-students-fall2023/2-web-app-exercise-last-team/issues/3
 
 ## Task boards
 
