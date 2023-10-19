@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block container %}
+<div>
+  <h1>Add songs</h1>
+</div>
+<form method="POST" action="/api/add-songs">
+  username
+  <input type="text" name="user_name" />
+  song_name
+  <input type="text" name="song_name" />
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

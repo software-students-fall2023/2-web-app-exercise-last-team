@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Views
 @app.route("/")
 @app.route("/<user_name>")
-def hello_world(user_name=None):
+def display_songs(user_name=None):
     song_list = None
     if user_name:
         song_list = db.songs.find({"user_name": user_name})
@@ -15,6 +15,21 @@ def hello_world(user_name=None):
         song_list = db.songs.find({})
 
     return render_template("home.html", song_list=song_list)
+
+
+@app.route("/add-songs")
+def add_songs():
+    return render_template("addSongs.html")
+
+
+@app.route("/delete-songs")
+def delete_songs():
+    return render_template("deleteSongs.html")
+
+
+@app.route("/search-songs")
+def search_songs():
+    return render_template("searchSongs.html")
 
 
 # Form methods
@@ -32,6 +47,12 @@ def deleteSongs():
     song_name = request.form["song_name"]
     db.songs.delete_one({"user_name": user_name, "song_name": song_name})
     return redirect("/")
+
+
+@app.route("/api/search-songs", methods=["POST"])
+def searchSongs():
+    user_name = request.form["user_name"]
+    return redirect("/" + user_name)
 
 
 # Connecting to local host

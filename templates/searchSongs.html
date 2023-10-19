@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block container %}
+<div>
+  <h1>Search Songs by Username</h1>
+  <form method="POST" action="/api/search-songs">
+    username
+    <input type="text" name="user_name" />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+{% endblock %}
