@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block container %}
+<div>
+  <h1>Edit songs</h1>
+</div>
+<form method="POST" action="/api/edit-songs">
+    Username
+    <input type="text" name="user_name" /> <br>
+    Song Name
+    <input type="text" name="song_name" /> <br> 
+    <p>Change to:</p>
+    Updated Username
+    <input type="text" name="updated_user_name" /> <br>
+    Updated Song Name
+    <input type="text" name="updated_song_name" /> <br>
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
