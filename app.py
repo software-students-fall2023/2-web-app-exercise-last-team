@@ -3,6 +3,10 @@ from flask import Flask, request, render_template, redirect
 
 app = Flask(__name__)
 
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
 
 # Views
 @app.route("/")
@@ -31,6 +35,11 @@ def delete_songs():
 def search_songs():
     return render_template("searchSongs.html")
 
+@app.route("/edit-songs")
+def search_songs():
+    return render_template("editSongs.html")
+
+
 
 # Form methods
 @app.route("/api/add-songs", methods=["POST"])
@@ -53,6 +62,26 @@ def deleteSongs():
 def searchSongs():
     user_name = request.form["user_name"]
     return redirect("/" + user_name)
+
+
+@app.route("/api/edit-songs", methods=["POST"])
+def editSongs():
+    user_name = request.form["user_name"]
+    song_name = request.form["song_name"]
+    updated_user_name = request.form["updated_user_name"]
+    updated_song_name = request.form["updated_song_name"]
+
+    db.collection_name.update_one( {
+        { "user_name": user_name, "song_name": song_name  },
+        {
+            "$set":{
+                "user_name": updated_user_name
+                "song_name": updated_song_name
+            }
+        }
+    })
+
+
 
 
 # Connecting to local host
