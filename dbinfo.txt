@@ -1,0 +1,4 @@
+--name: testingName
+MONGO_INITDB_ROOT_USERNAME: last-team 
+MONGO_INITDB_ROOT_PASSWORD: last-team-password
+
