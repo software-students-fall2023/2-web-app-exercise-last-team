@@ -32,5 +32,8 @@ https://github.com/software-students-fall2023/2-web-app-exercise-last-team/issue
 ## Task boards
 
 Sprint 1 board:
-https://docs.google.com/document/d/1mbuctRDXZWpEcuXsAVSEY9xcKTGTgKfbHznaIxntoB4/edit
+https://github.com/orgs/software-students-fall2023/projects/61/views/1
+
+Sprint 2 board:
+https://github.com/orgs/software-students-fall2023/projects/58
 
