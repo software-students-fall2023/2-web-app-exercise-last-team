@@ -1,15 +1,27 @@
 /* Common styles for all blocks */
 .container {
   width: 100%;
+  min-height: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #2B1392;
   border-radius: 5px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   color: DarkSlateBlue;
+}
+
+main{
+  flex: 1;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
 }
 
 a {
