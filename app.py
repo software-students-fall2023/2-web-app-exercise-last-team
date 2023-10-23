@@ -5,8 +5,34 @@ import os
 app = Flask(__name__)
 
 # Connecting to local host
-connection = pymongo.MongoClient("mongodb://localhost:27017")
-db = connection["test_database"]
+# connection = pymongo.MongoClient("mongodb://localhost:27017")
+# db = connection["test_database"]
+
+# connect to the database
+password = os.getenv("MONGO_INITDB_ROOT_PASSWORD")
+
+connection = pymongo.MongoClient(
+    os.getenv(
+        "mongodb+srv://last-team:"
+        + str(password)
+        + "@cluster0.m5t5gvu.mongodb.net/?retryWrites=true&w=majority"
+    ),
+    serverSelectionTimeoutMS=5000,
+)
+try:
+    db = connection["music_app"]
+except Exception as e:
+    # the ping command failed, so the connection is not available.
+    print(
+        " *",
+        "Failed to connect to MongoDB at",
+        os.getenv(
+            "mongodb+srv://last-team:"
+            + str(password)
+            + "@cluster0.m5t5gvu.mongodb.net/?retryWrites=true&w=majority"
+        ),
+    )
+    print("Database connection error:", e)  # debug
 
 
 # Views
