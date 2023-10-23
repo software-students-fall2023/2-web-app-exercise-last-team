@@ -1,0 +1,72 @@
+/* Common styles for all blocks */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: DarkSlateBlue;
+}
+
+form label {
+  font-weight: bold;
+  color: DarkSlateBlue;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #667788; /* Slightly lighter than DarkSlateBlue */
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+form input[type="submit"] {
+  background-color: DarkSlateBlue;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #334455; /* Slightly darker than DarkSlateBlue */
+}
+
+/* Styles for specific blocks */
+.add-songs-container h1,
+.delete-songs-container h1,
+.edit-songs-container h1,
+.search-songs-container h1 {
+  font-size: 1.5em;
+}
+
+.song-item {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.song-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: DarkSlateBlue;
+}
+
+.user-name {
+  font-style: italic;
+  color: #333;
+}
+
+/* Additional styling for spacing between items */
+.song-item + .song-item {
+  margin-top: 20px;
+}
