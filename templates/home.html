@@ -1,9 +1,10 @@
 {% extends 'base.html' %} {% block container %}
     {% for song in song_list%}
     <div class="song-item">
-      <p class="song-name">Music Name: {{song["song_name"]}}</h1>
+      <p class="song-name">♫ music name: {{song["song_name"]}}</h1>
       <p class="user-name">user: {{song["user_name"]}}</p>
     </div>
     <br>
     {% endfor %}
+ <img src="/static/images/home.svg" alt="home-icon" id="hp">
 {% endblock %}
