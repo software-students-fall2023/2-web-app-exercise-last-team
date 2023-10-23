@@ -1,10 +1,9 @@
 /* Common styles for all blocks */
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #2B1392;
   border-radius: 5px;
   font-family: Arial, sans-serif;
 }
@@ -13,60 +12,147 @@ h1 {
   color: DarkSlateBlue;
 }
 
-form label {
-  font-weight: bold;
-  color: DarkSlateBlue;
-}
-
-form input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #667788; /* Slightly lighter than DarkSlateBlue */
-  border-radius: 5px;
-  margin: 5px 0;
-}
-
-form input[type="submit"] {
-  background-color: DarkSlateBlue;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #334455; /* Slightly darker than DarkSlateBlue */
-}
-
-/* Styles for specific blocks */
-.add-songs-container h1,
-.delete-songs-container h1,
-.edit-songs-container h1,
-.search-songs-container h1 {
-  font-size: 1.5em;
+a {
+  font-size: 40px;
+  font-family: "Gill Sans", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 20px;
 }
 
 .song-item {
   background-color: #f0f0f0; /* Light gray background */
-  padding: 10px;
+  width: 70%;
+  padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 10px 0;
+  border-radius: 10px;
+  margin: 10px 50px;
 }
 
 .song-name {
   font-weight: bold;
   font-size: 1.2em;
+  font-family: "Gill Sans", sans-serif;
   color: DarkSlateBlue;
+  margin-left: 3%;
 }
 
 .user-name {
   font-style: italic;
-  color: #333;
+  font-weight: bold;
+  font-family: "Gill Sans", sans-serif;
+  color: DarkSlateBlue;
+  margin-left: 3%;
 }
 
 /* Additional styling for spacing between items */
 .song-item + .song-item {
   margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+#background-color{
+  background-color: #2B1392
+}
+
+body {
+  background-color: #2B1392
+}
+
+.text-color{
+  background-color: #E8E2FF
+}
+
+#hp  {
+  display: inline;
+  float: right;    
+  margin-left: 15%;
+  height: 300px;
+  
+  }
+
+.img-align {
+  margin-left: 30%;
+}
+h1 {
+  font-size: 60px;
+  font-family: "Gill Sans", sans-serif;
+  color: #FFFFFF;
+  width: 30%;
+  margin-left: 15%;
+  margin-top: 10%;
+  display: inline;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: "Gill Sans", sans-serif;
+  color: #FFFFFF;
+}
+
+form {
+  margin-left: 15%;
+}
+
+
+
+
+input[type=submit] {
+  margin: 25px 0 0 0;
+  width: 200px;
+  height: 80px;
+  color: #2B1392;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  background: #DFD9F6;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px #5534e5,
+              -2px -2px 10px #5534e5;
+}
+
+button:focus{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+
+input {
+  background: #DFD9F6;
+  border: none;
+  padding: 20px 40px;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2B1392;
+  box-shadow: 
+     -1px -1px 3px #5534e5,
+             inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #CCC4EF;
+  opacity: 1; /* Firefox */
+}
+
+input:hover {
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -1px -1px 2px #ffffff73;
+  filter: brightness(1.05);
+}
+
+.center {
+  line-height: 400px;
+  height: 400px;
+  text-align: center;
 }

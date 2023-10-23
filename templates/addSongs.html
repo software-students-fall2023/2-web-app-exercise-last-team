@@ -3,10 +3,9 @@
   <h1>Add songs</h1>
 </div>
 <form method="POST" action="/api/add-songs">
-  username
-  <input type="text" name="user_name" />
-  song_name
-  <input type="text" name="song_name" />
+  <input type="text" name="user_name" placeholder="username"/>
+  <input type="text" name="song_name" placeholder="song name"/>
   <input type="submit" value="Submit" />
 </form>
+<img src="/static/images/favorite.svg" alt="favorite-icon" id="hp">
 {% endblock %}
