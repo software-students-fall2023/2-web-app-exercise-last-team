@@ -28,6 +28,8 @@ a {
   border: 1px solid #ccc;
   border-radius: 10px;
   margin: 10px 50px;
+  box-shadow: 2px 2px 5px #5534e5,
+  -2px -2px 10px #5534e5;
 }
 
 .song-name {
